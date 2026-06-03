@@ -1,120 +1,94 @@
-// =========================
-// LANGUAGE SYSTEM (EN / KU / AR)
-// =========================
+// MENU
+function toggleMenu(){
+document.getElementById("nav").classList.toggle("active");
+}
 
-const translations = {
-en: {
-nav_home: "Home",
-nav_services: "Services",
-nav_pricing: "Pricing",
-nav_contact: "Contact",
+// FULL LANGUAGE SYSTEM (FIXED PROPERLY)
+const lang = {
+en:{
+nav_home:"Home",
+nav_services:"Services",
+nav_pricing:"Pricing",
+nav_contact:"Contact",
 
-hero_title: "Grow Your Business Online",
-hero_sub: "Websites, branding, social media & digital growth solutions.",
-cta1: "View Pricing",
-cta2: "Contact Us",
+hero_title:"Grow Your Business Online",
+hero_sub:"Websites, branding, social media & digital marketing.",
 
-services_title: "Services",
-pricing_title: "Pricing",
-contact_title: "Contact"
+cta1:"View Pricing",
+cta2:"Contact",
+
+services_title:"Services",
+pricing_title:"Pricing",
+contact_title:"Contact",
+
+s1_title:"Website Development",
+s2_title:"Logo Design",
+s3_title:"Photo Editing",
+s4_title:"Social Media",
+
+basic:"Basic",
+business:"Business",
+premium:"Premium"
 },
 
-ku: {
-nav_home: "سەرەتا",
-nav_services: "خزمەتگوزاری",
-nav_pricing: "نرخەکان",
-nav_contact: "پەیوەندی",
+ku:{
+nav_home:"سەرەتا",
+nav_services:"خزمەتگوزاری",
+nav_pricing:"نرخەکان",
+nav_contact:"پەیوەندی",
 
-hero_title: "بزنسەکەت گەشەپێبدە لە ئینتەرنێت",
-hero_sub: "وێبسایت، براندینگ، سۆشیال میدیا و گەشەپێدانی دیجیتاڵ",
-cta1: "نرخ ببینە",
-cta2: "پەیوەندی بکە",
+hero_title:"بزنسەکەت گەشەپێبدە",
+hero_sub:"وێبسایت، براندینگ، سۆشیال میدیا",
 
-services_title: "خزمەتگوزاریەکان",
-pricing_title: "نرخەکان",
-contact_title: "پەیوەندی"
+cta1:"نرخەکان",
+cta2:"پەیوەندی",
+
+services_title:"خزمەتگوزاری",
+pricing_title:"نرخەکان",
+contact_title:"پەیوەندی",
+
+s1_title:"دروستکردنی وێبسایت",
+s2_title:"دیزاینی لوگۆ",
+s3_title:"دەستکاری وێنە",
+s4_title:"سۆشیال میدیا",
+
+basic:"بنەڕەتی",
+business:"بیزنس",
+premium:"پڕەمیۆم"
 },
 
-ar: {
-nav_home: "الرئيسية",
-nav_services: "الخدمات",
-nav_pricing: "الأسعار",
-nav_contact: "اتصال",
+ar:{
+nav_home:"الرئيسية",
+nav_services:"الخدمات",
+nav_pricing:"الأسعار",
+nav_contact:"اتصال",
 
-hero_title: "نمِّ عملك عبر الإنترنت",
-hero_sub: "مواقع، تصميم، سوشيال ميديا وتسويق رقمي",
-cta1: "عرض الأسعار",
-cta2: "اتصل بنا",
+hero_title:"طوّر عملك",
+hero_sub:"مواقع، تصميم، سوشيال ميديا",
 
-services_title: "الخدمات",
-pricing_title: "الأسعار",
-contact_title: "اتصل بنا"
+cta1:"الأسعار",
+cta2:"اتصال",
+
+services_title:"الخدمات",
+pricing_title:"الأسعار",
+contact_title:"اتصال",
+
+s1_title:"تطوير المواقع",
+s2_title:"تصميم شعار",
+s3_title:"تعديل الصور",
+s4_title:"وسائل التواصل",
+
+basic:"أساسي",
+business:"أعمال",
+premium:"بريميوم"
 }
 };
 
-// APPLY LANGUAGE
-function setLang(lang){
+function setLang(l){
 document.querySelectorAll("[data-i18n]").forEach(el=>{
 const key = el.getAttribute("data-i18n");
-if(translations[lang][key]){
-el.innerText = translations[lang][key];
+if(lang[l][key]){
+el.innerText = lang[l][key];
 }
 });
 }
-
-// =========================
-// LEARN MORE TOGGLE
-// =========================
-
-function toggle(btn){
-const details = btn.nextElementSibling;
-
-if(details.style.display === "block"){
-details.style.display = "none";
-btn.innerText = "Learn More";
-}else{
-details.style.display = "block";
-btn.innerText = "Hide";
-}
-}
-
-// =========================
-// CALCULATOR
-// =========================
-
-const site = document.getElementById("site");
-const logo = document.getElementById("logo");
-const social = document.getElementById("social");
-const total = document.getElementById("total");
-
-function updatePrice(){
-
-let price = Number(site.value);
-
-if(logo.checked) price += 15;
-if(social.checked) price += 75;
-
-total.innerText = price;
-
-}
-
-if(site){
-site.addEventListener("change", updatePrice);
-logo.addEventListener("change", updatePrice);
-social.addEventListener("change", updatePrice);
-}
-
-// run once
-updatePrice();
-
-// =========================
-// SMOOTH SCROLL
-// =========================
-
-document.querySelectorAll("a[href^='#']").forEach(a=>{
-a.addEventListener("click",e=>{
-e.preventDefault();
-document.querySelector(a.getAttribute("href"))
-.scrollIntoView({behavior:"smooth"});
-});
-});
