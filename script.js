@@ -1,192 +1,120 @@
-// COUNTERS
+// =========================
+// LANGUAGE SYSTEM (EN / KU / AR)
+// =========================
 
-const counters = document.querySelectorAll('.counter');
+const translations = {
+en: {
+nav_home: "Home",
+nav_services: "Services",
+nav_pricing: "Pricing",
+nav_contact: "Contact",
 
-counters.forEach(counter => {
-    const updateCounter = () => {
-        const target = +counter.getAttribute('data-target');
-        const current = +counter.innerText;
+hero_title: "Grow Your Business Online",
+hero_sub: "Websites, branding, social media & digital growth solutions.",
+cta1: "View Pricing",
+cta2: "Contact Us",
 
-        const increment = target / 100;
+services_title: "Services",
+pricing_title: "Pricing",
+contact_title: "Contact"
+},
 
-        if(current < target){
-            counter.innerText =
-            Math.ceil(current + increment);
-            setTimeout(updateCounter,20);
-        }else{
-            counter.innerText = target;
-        }
-    };
+ku: {
+nav_home: "سەرەتا",
+nav_services: "خزمەتگوزاری",
+nav_pricing: "نرخەکان",
+nav_contact: "پەیوەندی",
 
-    updateCounter();
+hero_title: "بزنسەکەت گەشەپێبدە لە ئینتەرنێت",
+hero_sub: "وێبسایت، براندینگ، سۆشیال میدیا و گەشەپێدانی دیجیتاڵ",
+cta1: "نرخ ببینە",
+cta2: "پەیوەندی بکە",
+
+services_title: "خزمەتگوزاریەکان",
+pricing_title: "نرخەکان",
+contact_title: "پەیوەندی"
+},
+
+ar: {
+nav_home: "الرئيسية",
+nav_services: "الخدمات",
+nav_pricing: "الأسعار",
+nav_contact: "اتصال",
+
+hero_title: "نمِّ عملك عبر الإنترنت",
+hero_sub: "مواقع، تصميم، سوشيال ميديا وتسويق رقمي",
+cta1: "عرض الأسعار",
+cta2: "اتصل بنا",
+
+services_title: "الخدمات",
+pricing_title: "الأسعار",
+contact_title: "اتصل بنا"
+}
+};
+
+// APPLY LANGUAGE
+function setLang(lang){
+document.querySelectorAll("[data-i18n]").forEach(el=>{
+const key = el.getAttribute("data-i18n");
+if(translations[lang][key]){
+el.innerText = translations[lang][key];
+}
 });
+}
 
-// FAQ
+// =========================
+// LEARN MORE TOGGLE
+// =========================
 
-const faqItems =
-document.querySelectorAll('.faq-item');
+function toggle(btn){
+const details = btn.nextElementSibling;
 
-faqItems.forEach(item => {
+if(details.style.display === "block"){
+details.style.display = "none";
+btn.innerText = "Learn More";
+}else{
+details.style.display = "block";
+btn.innerText = "Hide";
+}
+}
 
-    const button =
-    item.querySelector('.faq-question');
-
-    button.addEventListener('click', () => {
-
-        item.classList.toggle('active');
-
-    });
-
-});
-
-// SERVICES
-
-const expandButtons =
-document.querySelectorAll('.expand-btn');
-
-expandButtons.forEach(button => {
-
-    button.addEventListener('click', () => {
-
-        const details =
-        button.nextElementSibling;
-
-        if(details.style.display === 'block'){
-            details.style.display = 'none';
-            button.innerText = 'Learn More';
-        }else{
-            details.style.display = 'block';
-            button.innerText = 'Show Less';
-        }
-
-    });
-
-});
-
+// =========================
 // CALCULATOR
+// =========================
 
-const websiteType =
-document.getElementById('websiteType');
-
-const logoOption =
-document.getElementById('logoOption');
-
-const seoOption =
-document.getElementById('seoOption');
-
-const socialOption =
-document.getElementById('socialOption');
-
-const totalPrice =
-document.getElementById('totalPrice');
+const site = document.getElementById("site");
+const logo = document.getElementById("logo");
+const social = document.getElementById("social");
+const total = document.getElementById("total");
 
 function updatePrice(){
 
-    if(!websiteType) return;
+let price = Number(site.value);
 
-    let total =
-    Number(websiteType.value);
+if(logo.checked) price += 15;
+if(social.checked) price += 75;
 
-    if(logoOption.checked){
-        total += 15;
-    }
-
-    if(seoOption.checked){
-        total += 50;
-    }
-
-    if(socialOption.checked){
-        total += 75;
-    }
-
-    totalPrice.innerText =
-    '$' + total;
+total.innerText = price;
 
 }
 
-if(websiteType){
-
-websiteType.addEventListener(
-'change',
-updatePrice
-);
-
-logoOption.addEventListener(
-'change',
-updatePrice
-);
-
-seoOption.addEventListener(
-'change',
-updatePrice
-);
-
-socialOption.addEventListener(
-'change',
-updatePrice
-);
-
+if(site){
+site.addEventListener("change", updatePrice);
+logo.addEventListener("change", updatePrice);
+social.addEventListener("change", updatePrice);
 }
 
-// TESTIMONIALS
+// run once
+updatePrice();
 
-const testimonials =
-document.querySelectorAll(
-'.testimonial'
-);
-
-let currentSlide = 0;
-
-if(testimonials.length){
-
-setInterval(() => {
-
-    testimonials[currentSlide]
-    .classList.remove('active');
-
-    currentSlide++;
-
-    if(currentSlide >=
-       testimonials.length){
-        currentSlide = 0;
-    }
-
-    testimonials[currentSlide]
-    .classList.add('active');
-
-},4000);
-
-}
-
+// =========================
 // SMOOTH SCROLL
+// =========================
 
-document
-.querySelectorAll('a[href^="#"]')
-.forEach(anchor => {
-
-anchor.addEventListener(
-'click',
-function(e){
-
+document.querySelectorAll("a[href^='#']").forEach(a=>{
+a.addEventListener("click",e=>{
 e.preventDefault();
-
-const target =
-document.querySelector(
-this.getAttribute('href')
-);
-
-if(target){
-
-target.scrollIntoView({
-behavior:'smooth'
+document.querySelector(a.getAttribute("href"))
+.scrollIntoView({behavior:"smooth"});
 });
-
-}
-
 });
-
-});
-
-console.log(
-'Tala Management Loaded'
-);
