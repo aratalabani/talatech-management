@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tala Management</title>
+<title>Tala Management PRO</title>
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -11,7 +12,7 @@
 
 <body>
 
-<!-- BACKGROUND SHAPES -->
+<!-- BACKGROUND -->
 <div class="bg-shape shape1"></div>
 <div class="bg-shape shape2"></div>
 <div class="bg-shape shape3"></div>
@@ -21,7 +22,9 @@
 
 <div class="logo">Tala <span>Management</span></div>
 
-<nav class="nav-links">
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="nav" class="nav-links">
 <a href="#home" data-i18n="nav_home">Home</a>
 <a href="#services" data-i18n="nav_services">Services</a>
 <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
@@ -38,18 +41,16 @@
 
 <!-- HERO -->
 <section id="home" class="hero">
-<div class="hero-content">
 
 <h1 data-i18n="hero_title">Grow Your Business Online</h1>
 
 <p data-i18n="hero_sub">
-Websites, branding, social media & digital growth solutions.
+Websites, branding, social media & digital marketing solutions.
 </p>
 
 <a href="#pricing" class="btn primary-btn" data-i18n="cta1">View Pricing</a>
 <a href="#contact" class="btn secondary-btn" data-i18n="cta2">Contact Us</a>
 
-</div>
 </section>
 
 <!-- SERVICES -->
@@ -61,10 +62,10 @@ Websites, branding, social media & digital growth solutions.
 
 <div class="service-card">
 <h3>Website Development</h3>
-<p>Starting from $99</p>
+<p>$99+</p>
 <button onclick="toggle(this)">Learn More</button>
 <div class="details">
-Full responsive websites, SEO ready, fast loading.
+Modern websites, SEO optimized, mobile friendly, fast loading.
 </div>
 </div>
 
@@ -73,34 +74,34 @@ Full responsive websites, SEO ready, fast loading.
 <p>$15</p>
 <button onclick="toggle(this)">Learn More</button>
 <div class="details">
-Modern logos, branding identity, high quality files.
+High quality logos for brands and businesses.
 </div>
 </div>
 
 <div class="service-card">
 <h3>Photo Editing</h3>
-<p>$5/photo or 10 for $29.99</p>
+<p>$5 / photo</p>
 <button onclick="toggle(this)">Learn More</button>
 <div class="details">
-Retouching, background removal, business editing.
+Professional editing, retouching, background removal.
 </div>
 </div>
 
 <div class="service-card">
 <h3>Social Media</h3>
-<p>From $75/month</p>
+<p>$75/month</p>
 <button onclick="toggle(this)">Learn More</button>
 <div class="details">
-Content creation, posting, growth & engagement.
+Posts, growth, engagement, strategy, content creation.
 </div>
 </div>
 
 <div class="service-card">
-<h3>Social Media Setup</h3>
+<h3>Setup Service</h3>
 <p>$99</p>
 <button onclick="toggle(this)">Learn More</button>
 <div class="details">
-Instagram/TikTok setup, branding, optimization.
+Instagram / TikTok setup + branding optimization.
 </div>
 </div>
 
@@ -109,7 +110,7 @@ Instagram/TikTok setup, branding, optimization.
 <p>$15+</p>
 <button onclick="toggle(this)">Learn More</button>
 <div class="details">
-Promotion via pages or personal accounts ($2–$5 depending platform).
+Promotion via Instagram/TikTok pages or personal accounts.
 </div>
 </div>
 
@@ -125,18 +126,18 @@ Promotion via pages or personal accounts ($2–$5 depending platform).
 <div class="pricing-grid">
 
 <div class="price-card">
-<h3>Basic Website</h3>
-<p>$99+</p>
+<h3>Basic</h3>
+<p>$99</p>
 </div>
 
 <div class="price-card">
-<h3>Business Website</h3>
-<p>$250+</p>
+<h3>Business</h3>
+<p>$250</p>
 </div>
 
 <div class="price-card">
-<h3>Premium Website</h3>
-<p>$500+</p>
+<h3>Premium</h3>
+<p>$500</p>
 </div>
 
 </div>
@@ -146,16 +147,16 @@ Promotion via pages or personal accounts ($2–$5 depending platform).
 <!-- CALCULATOR -->
 <section class="section">
 
-<h2>Price Calculator</h2>
+<h2>Calculator</h2>
 
 <select id="site">
-<option value="99">Basic Website ($99)</option>
-<option value="250">Business Website ($250)</option>
-<option value="500">Premium Website ($500)</option>
+<option value="99">Basic ($99)</option>
+<option value="250">Business ($250)</option>
+<option value="500">Premium ($500)</option>
 </select>
 
-<label><input type="checkbox" id="logo"> Logo ($15)</label>
-<label><input type="checkbox" id="social"> Social Media ($75)</label>
+<label><input type="checkbox" id="logo"> Logo +$15</label>
+<label><input type="checkbox" id="social"> Social Media +$75</label>
 
 <h3>Total: $<span id="total">0</span></h3>
 
@@ -169,8 +170,8 @@ Promotion via pages or personal accounts ($2–$5 depending platform).
 <p>WhatsApp: +964 751 584 7687</p>
 
 <a class="btn primary-btn"
-href="https://wa.me/9647515847687">
-Chat Now
+href="https://wa.me/9647515847687?text=Hi%20Tala%20Management,%20I%20need%20a%20website">
+Send WhatsApp Message
 </a>
 
 </section>
@@ -178,263 +179,3 @@ Chat Now
 <script src="script.js"></script>
 </body>
 </html>
-/* =========================
-   BASE
-========================= */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#f8fafc;
-color:#0f172a;
-overflow-x:hidden;
-}
-
-/* =========================
-   FLOATING BACKGROUND
-========================= */
-
-.bg-shape{
-position:fixed;
-border-radius:50%;
-filter:blur(90px);
-opacity:0.35;
-z-index:-1;
-animation:float 10s infinite ease-in-out;
-}
-
-.shape1{
-width:300px;
-height:300px;
-background:#60a5fa;
-top:-100px;
-left:-80px;
-}
-
-.shape2{
-width:250px;
-height:250px;
-background:#fbbf24;
-right:-80px;
-top:200px;
-}
-
-.shape3{
-width:300px;
-height:300px;
-background:#38bdf8;
-bottom:-120px;
-left:40%;
-}
-
-@keyframes float{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-40px);}
-}
-
-/* =========================
-   HEADER
-========================= */
-
-.header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-position:sticky;
-top:0;
-background:rgba(255,255,255,0.8);
-backdrop-filter:blur(10px);
-border-bottom:1px solid #e2e8f0;
-z-index:1000;
-}
-
-.logo{
-font-size:1.6rem;
-font-weight:700;
-}
-
-.logo span{
-color:#2563eb;
-}
-
-.nav-links{
-display:flex;
-gap:20px;
-}
-
-.nav-links a{
-text-decoration:none;
-color:#0f172a;
-font-weight:600;
-}
-
-.nav-links a:hover{
-color:#2563eb;
-}
-
-.language-switcher button{
-margin-left:8px;
-padding:6px 10px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-background:white;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-height:90vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-.hero h1{
-font-size:3rem;
-margin-bottom:20px;
-}
-
-.hero p{
-color:#64748b;
-margin-bottom:25px;
-}
-
-.btn{
-padding:12px 22px;
-border-radius:10px;
-text-decoration:none;
-font-weight:600;
-display:inline-block;
-margin:5px;
-}
-
-.primary-btn{
-background:#2563eb;
-color:white;
-}
-
-.secondary-btn{
-border:2px solid #2563eb;
-color:#2563eb;
-}
-
-/* =========================
-   SECTIONS
-========================= */
-
-.section{
-padding:80px 8%;
-text-align:center;
-}
-
-h2{
-font-size:2.2rem;
-margin-bottom:40px;
-}
-
-/* =========================
-   SERVICES
-========================= */
-
-.services-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.service-card{
-background:white;
-padding:25px;
-border-radius:16px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.service-card:hover{
-transform:translateY(-8px);
-}
-
-.service-card button{
-margin-top:10px;
-padding:8px 12px;
-border:none;
-border-radius:8px;
-background:#2563eb;
-color:white;
-cursor:pointer;
-}
-
-.details{
-display:none;
-margin-top:10px;
-color:#64748b;
-}
-
-/* =========================
-   PRICING
-========================= */
-
-.pricing-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-}
-
-.price-card{
-background:white;
-padding:25px;
-border-radius:16px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-/* =========================
-   CALCULATOR
-========================= */
-
-select{
-padding:10px;
-border-radius:10px;
-margin-bottom:15px;
-width:250px;
-}
-
-label{
-display:block;
-margin:10px;
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-#contact p{
-margin:10px 0;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:2rem;
-}
-
-.nav-links{
-display:none;
-}
-
-}
