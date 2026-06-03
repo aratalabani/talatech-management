@@ -4,168 +4,363 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TalaTech Management</title>
+<title>Tala Management | Digital Growth Agency</title>
+
+<meta name="description" content="Professional Websites, Social Media Management, Logo Design, Photo Editing and Digital Marketing Services.">
 
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="header">
-<nav class="navbar">
-<div class="logo">TalaTech <span>Management</span></div>
+<!-- Background Shapes -->
+<div class="bg-shape shape1"></div>
+<div class="bg-shape shape2"></div>
+<div class="bg-shape shape3"></div>
 
-<ul class="nav-links" id="navLinks">
+<!-- HEADER -->
+
+<header class="header">
+
+<div class="logo">
+Tala <span>Management</span>
+</div>
+
+<nav>
+
+<ul class="nav-links">
+
 <li><a href="#home">Home</a></li>
 <li><a href="#services">Services</a></li>
-<li><a href="#portfolio">Services</a></li>
 <li><a href="#pricing">Pricing</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#about">About</a></li>
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
-<div class="hamburger" onclick="toggleMenu()">☰</div>
 </nav>
+
+<div class="language-switcher">
+
+<button onclick="setLanguage('en')">
+🇬🇧
+</button>
+
+<button onclick="setLanguage('ku')">
+کوردی
+</button>
+
+<button onclick="setLanguage('ar')">
+العربية
+</button>
+
+</div>
+
 </header>
 
 <!-- HERO -->
-<section id="home" class="hero">
-<h1>We Build Websites That Grow Your Business</h1>
-<p>Web design, branding, social media management & digital marketing.</p>
 
-<a href="#pricing" class="btn">View Prices</a>
-<a href="#contact" class="btn outline">Contact Us</a>
+<section id="home" class="hero">
+
+<div class="hero-content">
+
+<h1
+data-en="Helping Businesses Grow Online"
+data-ku="یارمەتیدانی بزنسەکان بۆ گەشەکردن لە ئینتەرنێت"
+data-ar="نساعد الشركات على النمو عبر الإنترنت">
+Helping Businesses Grow Online
+</h1>
+
+<p
+data-en="Professional websites, branding, social media management and digital growth solutions."
+data-ku="دروستکردنی وێبسایت و براندینگ و بەڕێوەبردنی سۆشیال میدیا."
+data-ar="مواقع احترافية وإدارة وسائل التواصل الاجتماعي وحلول النمو الرقمي.">
+
+Professional websites, branding, social media management and digital growth solutions.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#pricing" class="btn primary-btn">
+View Pricing
+</a>
+
+<a href="https://wa.me/9647515847687" class="btn secondary-btn">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="stat-card">
+<h2 class="counter" data-target="50">0</h2>
+<p>Websites Built</p>
+</div>
+
+<div class="stat-card">
+<h2 class="counter" data-target="100">0</h2>
+<p>Projects Completed</p>
+</div>
+
+<div class="stat-card">
+<h2 class="counter" data-target="98">0</h2>
+<p>% Client Satisfaction</p>
+</div>
+
+<div class="stat-card">
+<h2 class="counter" data-target="24">0</h2>
+<p>Hour Response Time</p>
+</div>
+
 </section>
 
 <!-- SERVICES -->
+
 <section id="services" class="section">
-<h2>Our Services</h2>
 
-<div class="grid">
+<div class="section-header">
 
-<div class="card" onclick="toggleDetails(this)">
-<h3>Website Development</h3>
-<p>Starting from $125</p>
-<div class="details">
-We build modern responsive websites optimized for speed, SEO, and conversions.
-</div>
-</div>
+<h2>Explore Our Services</h2>
 
-<div class="card" onclick="toggleDetails(this)">
-<h3>Social Media Management</h3>
-<p>$75/month</p>
-<div class="details">
-We manage Instagram, TikTok, and Facebook with daily content and growth strategy.
-</div>
-</div>
-
-<div class="card" onclick="toggleDetails(this)">
-<h3>Logo Design</h3>
-<p>$15</p>
-<div class="details">
-Professional logo design with high quality files for your brand identity.
-</div>
-</div>
-
-<div class="card" onclick="toggleDetails(this)">
-<h3>Photo Editing</h3>
-<p>$5 per photo</p>
-<div class="details">
-Business photo editing, product retouching, and social media graphics.
-10 photos = $29.99
-</div>
-</div>
+<p>
+Click any service to learn more.
+</p>
 
 </div>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<div class="service-icon">
+🌐
+</div>
+
+<h3>
+Website Development
+</h3>
+
+<p>
+Modern responsive websites built to convert visitors into customers.
+</p>
+
+<button class="expand-btn">
+Learn More
+</button>
+
+<div class="service-details">
+
+<ul>
+
+<li>Mobile Responsive</li>
+
+<li>Professional Design</li>
+
+<li>WhatsApp Integration</li>
+
+<li>Fast Loading</li>
+
+<li>SEO Friendly</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+🎨
+</div>
+
+<h3>
+Logo Design
+</h3>
+
+<p>
+Professional logos designed for businesses and brands.
+</p>
+
+<button class="expand-btn">
+Learn More
+</button>
+
+<div class="service-details">
+
+<ul>
+
+<li>Modern Branding</li>
+
+<li>Vector Files</li>
+
+<li>High Resolution</li>
+
+<li>Social Media Ready</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+📸
+</div>
+
+<h3>
+Photo Editing
+</h3>
+
+<p>
+Professional editing for businesses and social media.
+</p>
+
+<button class="expand-btn">
+Learn More
+</button>
+
+<div class="service-details">
+
+<ul>
+
+<li>Retouching</li>
+
+<li>Background Removal</li>
+
+<li>Business Graphics</li>
+
+<li>Advertisement Images</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+📱
+</div>
+
+<h3>
+Social Media Management
+</h3>
+
+<p>
+Content creation and audience growth strategies.
+</p>
+
+<button class="expand-btn">
+Learn More
+</button>
+
+<div class="service-details">
+
+<ul>
+
+<li>Content Planning</li>
+
+<li>Account Management</li>
+
+<li>Audience Growth</li>
+
+<li>Monthly Reports</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+🚀
+</div>
+
+<h3>
+Digital Marketing
+</h3>
+
+<p>
+Advertising campaigns that generate leads and sales.
+</p>
+
+<button class="expand-btn">
+Learn More
+</button>
+
+<div class="service-details">
+
+<ul>
+
+<li>Facebook Ads</li>
+
+<li>Instagram Ads</li>
+
+<li>Lead Generation</li>
+
+<li>Performance Tracking</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+🔍
+</div>
+
+<h3>
+SEO Optimization
+</h3>
+
+<p>
+Improve visibility and rank higher on Google.
+</p>
+
+<button class="expand-btn">
+Learn More
+</button>
+
+<div class="service-details">
+
+<ul>
+
+<li>Keyword Research</li>
+
+<li>On Page SEO</li>
+
+<li>Technical SEO</li>
+
+<li>Local SEO</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- CALCULATOR -->
-<section class="section">
-<h2>Price Calculator</h2>
-
-<div class="calculator">
-
-<select id="service">
-<option value="125">Basic Website - $125</option>
-<option value="350">Business Website - $350</option>
-<option value="650">Premium Website - $650</option>
-<option value="15">Logo Design - $15</option>
-<option value="5">Photo Editing - $5</option>
-<option value="75">Social Media - $75</option>
-</select>
-
-<input type="number" id="qty" value="1" placeholder="Quantity">
-
-<button onclick="calculate()">Calculate</button>
-
-<h3 id="result">Total: $0</h3>
-
-</div>
-</section>
-
-<!-- PRICING -->
-<section id="pricing" class="section">
-<h2>Pricing</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Basic Website</h3>
-<p>$125</p>
-</div>
-
-<div class="card">
-<h3>Business Website</h3>
-<p>$350</p>
-</div>
-
-<div class="card">
-<h3>Premium Website</h3>
-<p>$650</p>
-</div>
-
-<div class="card">
-<h3>Logo Design</h3>
-<p>$15</p>
-</div>
-
-<div class="card">
-<h3>Photo Editing</h3>
-<p>$5 / photo</p>
-</div>
-
-<div class="card">
-<h3>Social Media</h3>
-<p>$75 / month</p>
-</div>
-
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section">
-<h2>Contact Us</h2>
-
-<form class="contact-form">
-<input type="text" placeholder="Name">
-<input type="email" placeholder="Email">
-<textarea placeholder="Message"></textarea>
-
-<button type="submit" class="btn">Send</button>
-</form>
-
-<p>WhatsApp: +964 751 584 7687</p>
-
-<a class="btn" href="https://wa.me/9647515847687">Message on WhatsApp</a>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-<p>© 2026 TalaTech Management</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
-<script src="script.js"></script>
+<!-- CONTINUE WITH PRICING, CALCULATOR, PORTFOLIO, TESTIMONIALS, FAQ, CONTACT, FOOTER -->
