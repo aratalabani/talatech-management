@@ -299,6 +299,9 @@ border-radius:24px;
 text-align:center;
 box-shadow:0 10px 30px rgba(0,0,0,.08);
 transition:.3s;
+
+position:relative;
+overflow:hidden;
 }
 
 .price-card:hover{
@@ -778,17 +781,19 @@ box-shadow:0 15px 35px rgba(0,0,0,.08);
     transform: scale(1.03);
     position: relative;
     overflow: hidden;
-}
-.ribbon{
+}.ribbon{
     position:absolute;
-    top:15px;
-    right:-40px;
-    padding:8px 40px;
+    top:20px;
+    right:-55px;
+    width:180px;
+    text-align:center;
+    padding:8px 0;
     color:white;
     font-size:12px;
     font-weight:700;
     transform:rotate(45deg);
-    z-index:10;
+    z-index:100;
+}
 }
 
 .basic-website .ribbon{
