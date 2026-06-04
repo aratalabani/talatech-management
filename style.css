@@ -779,80 +779,30 @@ box-shadow:0 15px 35px rgba(0,0,0,.08);
     position: relative;
     overflow: hidden;
 }
-
-.premium-business::before {
-    content: "BEST VALUE";
-    position: absolute;
-    top: 15px;
-    right: -35px;
-    background: #4da6ff;
-    color: white;
-    padding: 8px 40px;
-    font-size: 12px;
-    font-weight: 700;
-    transform: rotate(45deg);
+.ribbon{
+    position:absolute;
+    top:15px;
+    right:-40px;
+    padding:8px 40px;
+    color:white;
+    font-size:12px;
+    font-weight:700;
+    transform:rotate(45deg);
+    z-index:10;
 }
 
-.premium-business .price {
-    color: #4da6ff;
-    font-size: 2rem;
-    font-weight: 700;
-}
-.basic-website,
-.business-website,
-.premium-website {
-    position: relative;
-    overflow: hidden;
+.basic-website .ribbon{
+    background:#22c55e;
 }
 
-.basic-website::before {
-    content: "FASTEST SETUP";
-    position: absolute;
-    top: 15px;
-    right: -40px;
-    background: #22c55e;
-    color: white;
-    padding: 8px 40px;
-    font-size: 12px;
-    font-weight: 700;
-    transform: rotate(45deg);
+.business-website .ribbon{
+    background:#f59e0b;
 }
 
-.business-website::before {
-    content: "MOST POPULAR";
-    position: absolute;
-    top: 15px;
-    right: -40px;
-    background: #f59e0b;
-    color: white;
-    padding: 8px 40px;
-    font-size: 12px;
-    font-weight: 700;
-    transform: rotate(45deg);
+.premium-website .ribbon{
+    background:#8b5cf6;
 }
 
-.premium-website::before {
-    content: "RECOMMENDED";
-    position: absolute;
-    top: 15px;
-    right: -40px;
-    background: #8b5cf6;
-    color: white;
-    padding: 8px 40px;
-    font-size: 12px;
-    font-weight: 700;
-    transform: rotate(45deg);
-}
-
-.premium-business::before {
-    content: "NEW";
-    position: absolute;
-    top: 15px;
-    right: -40px;
-    background: #06b6d4;
-    color: white;
-    padding: 8px 40px;
-    font-size: 12px;
-    font-weight: 700;
-    transform: rotate(45deg);
+.premium-business .ribbon{
+    background:#06b6d4;
 }
