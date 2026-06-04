@@ -329,8 +329,8 @@ margin:12px 0;
 ========================= */
 
 .calculator-section{
-display:flex;
-justify-content:center;
+display:block;
+padding:100px 8%;
 }
 
 .calculator-card{
