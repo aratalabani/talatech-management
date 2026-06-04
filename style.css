@@ -773,3 +773,28 @@ max-width:800px;
 margin:0 auto;
 box-shadow:0 15px 35px rgba(0,0,0,.08);
 }
+.premium-business {
+    border: 3px solid #4da6ff;
+    transform: scale(1.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.premium-business::before {
+    content: "BEST VALUE";
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    background: #4da6ff;
+    color: white;
+    padding: 8px 40px;
+    font-size: 12px;
+    font-weight: 700;
+    transform: rotate(45deg);
+}
+
+.premium-business .price {
+    color: #4da6ff;
+    font-size: 2rem;
+    font-weight: 700;
+}
