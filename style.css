@@ -798,3 +798,52 @@ box-shadow:0 15px 35px rgba(0,0,0,.08);
     font-size: 2rem;
     font-weight: 700;
 }
+.basic-website,
+.business-website,
+.premium-website {
+    position: relative;
+    overflow: hidden;
+}
+
+.basic-website::before {
+    content: "FASTEST SETUP";
+    position: absolute;
+    top: 15px;
+    right: -40px;
+    background: #22c55e;
+    color: white;
+    padding: 8px 40px;
+    font-size: 12px;
+    font-weight: 700;
+    transform: rotate(45deg);
+}
+
+.business-website::before {
+    content: "MOST POPULAR";
+    position: absolute;
+    top: 15px;
+    right: -40px;
+    background: #f59e0b;
+    color: white;
+    padding: 8px 40px;
+    font-size: 12px;
+    font-weight: 700;
+    transform: rotate(45deg);
+}
+
+.premium-website::before {
+    content: "RECOMMENDED";
+    position: absolute;
+    top: 15px;
+    right: -40px;
+    background: #8b5cf6;
+    color: white;
+    padding: 8px 40px;
+    font-size: 12px;
+    font-weight: 700;
+    transform: rotate(45deg);
+}
+
+.premium-business::before {
+    content: "NEW";
+}
