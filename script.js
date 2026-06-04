@@ -173,3 +173,46 @@ behavior:'smooth'
 console.log(
 'Tala Management Loaded Successfully'
 );
+console.log(
+'Tala Management Loaded'
+);
+
+function sendQuote(){
+
+const name =
+document.getElementById("quoteName").value;
+
+const email =
+document.getElementById("quoteEmail").value;
+
+const phone =
+document.getElementById("quotePhone").value;
+
+const service =
+document.getElementById("quoteService").value;
+
+const details =
+document.getElementById("quoteDetails").value;
+
+const message =
+`Hello Tala Management,
+
+NEW QUOTE REQUEST
+
+Name: ${name}
+
+Email: ${email}
+
+Phone: ${phone}
+
+Service: ${service}
+
+Project Details:
+${details}`;
+
+window.open(
+`https://wa.me/9647515847687?text=${encodeURIComponent(message)}`,
+'_blank'
+);
+
+}
