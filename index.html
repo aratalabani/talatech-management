@@ -940,6 +940,35 @@ Request Quote
 
 </div>
 </section>
+
+<script>
+document.getElementById("sendQuote").addEventListener("click", function(){
+
+const name = document.getElementById("quoteName").value;
+const email = document.getElementById("quoteEmail").value;
+const phone = document.getElementById("quotePhone").value;
+const service = document.getElementById("quoteService").value;
+const details = document.getElementById("quoteDetails").value;
+
+const message =
+`New Quote Request
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Service: ${service}
+
+Details:
+${details}`;
+
+window.open(
+`https://wa.me/9647515847687?text=${encodeURIComponent(message)}`,
+'_blank'
+);
+
+});
+</script>
+  i 
 <!-- CONTACT -->
 
 <section id="contact" class="section contact-section">
